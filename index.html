@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover a curated selection of fine spirits at our exclusive speakeasy, open 7 nights a week. Experience a unique atmosphere for those seeking more than just a bar."
+    />
+    <meta
+      name="keywords"
+      content="speakeasy, fine spirits, cocktails, hidden bar, nightlife"
+    />
+    <title>An Invitation to the Hidden - Exclusive Speakeasy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body class="bg-white text-black font-sans dark:bg-black dark:text-white">
+    <header class="container mx-auto px-4 py-8">
+      <section class="mb-12">
+        <h1
+          class="text-2xl sm:text-3xl md:text-4xl uppercase font-black mb-6 text-left tracking-wide"
+        >
+          <span class="block tracking-[0.05em]">An Invitation</span>
+          <span class="block tracking-[0.03em]">to the Hidden</span>
+        </h1>
+        <div class="w-full h-96 overflow-hidden mb-6">
+          <img
+            src="./assets/img/flower.webp"
+            alt="Close-up of a vibrant flower, symbolizing the elegance of our speakeasy"
+            class="w-full h-full object-cover cursor-pointer"
+            onclick="openModal(this.src)"
+          />
+        </div>
+      </section>
+    </header>
+
+    <main class="container mx-auto px-4">
+      <section class="mb-12">
+        <div
+          class="flex flex-col lg:flex-row items-start gap-8 md:gap-16 text-sm uppercase"
+        >
+          <div class="flex flex-col sm:flex-row gap-8 sm:gap-12">
+            <div>
+              <p class="text-gray-600 dark:text-gray-300">
+                Curated Selection of
+              </p>
+              <p class="text-xl font-bold">Fine Spirits</p>
+            </div>
+
+            <div>
+              <p class="text-gray-600 dark:text-gray-300">A Hidden Gem</p>
+              <p class="text-xl font-bold">7 Nights / Week</p>
+            </div>
+          </div>
+
+          <div
+            class="text-gray-600 dark:text-gray-300 normal-case max-w-md md:max-w-2xl"
+          >
+            <p>
+              Step into a place where time slows down and the night feels
+              endless. Our speakeasy offers a unique, intimate atmosphere,
+              perfect for those seeking something beyond the ordinary. Come for
+              the experience, stay for the vibes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <div class="text-center mb-6">
+          <h2 class="text-5xl uppercase font-black text-center">Behind</h2>
+          <h3 class="font-semibold">Closed Doors</h3>
+        </div>
+        <p
+          class="text-center text-gray-800 mb-8 max-w-2xl mx-auto dark:text-gray-300"
+        >
+          Our speakeasy offers an atmosphere that's both sleek and relaxed,
+          perfect for those who appreciate the finer things in life. Whether
+          you're here for a quiet drink or a linger into the night, every moment
+          feels exclusive.
+        </p>
+      </section>
+
+      <section
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-12"
+      >
+        <div class="overflow-hidden aspect-[4/3]">
+          <img
+            src="./assets/img/bubbles.webp"
+            alt="Bubbling cocktail glass"
+            class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
+            onclick="openModal(this.src)"
+          />
+        </div>
+        <div class="overflow-hidden aspect-[4/3]">
+          <img
+            src="./assets/img/bottles.webp"
+            alt="Collection of premium spirit bottles"
+            class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
+            onclick="openModal(this.src)"
+          />
+        </div>
+        <div class="overflow-hidden aspect-[4/3]">
+          <img
+            src="./assets/img/bar.webp"
+            alt="Elegant bar counter setup"
+            class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
+            onclick="openModal(this.src)"
+          />
+        </div>
+        <div class="overflow-hidden aspect-[4/3]">
+          <img
+            src="./assets/img/landscape.webp"
+            alt="Scenic view of speakeasy ambiance"
+            class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
+            onclick="openModal(this.src)"
+          />
+        </div>
+        <div class="overflow-hidden aspect-[4/3]">
+          <img
+            src="./assets/img/cocktails.webp"
+            alt="Neon-lit cocktail display"
+            class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
+            onclick="openModal(this.src)"
+          />
+        </div>
+        <div class="overflow-hidden aspect-[4/3]">
+          <img
+            src="./assets/img/smoky.webp"
+            alt="Smoky cocktail presentation"
+            class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
+            onclick="openModal(this.src)"
+          />
+        </div>
+      </section>
+      <section class="text-center my-8">
+        <button
+          class="bg-black text-white py-2 px-6 uppercase tracking-wide font-bold hover:bg-gray-800 transition-colors duration-300 dark:text-black dark:bg-white"
+        >
+          Guest List
+        </button>
+      </section>
+    </main>
+
+    <!-- Modal -->
+    <div
+      id="modal"
+      class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50"
+      role="dialog"
+      aria-modal="true"
+      tabindex="-1"
+    >
+      <div
+        id="modalContent"
+        class="relative bg-black p-4 rounded-lg shadow-xl max-w-[90vw] max-h-[90vh] overflow-hidden"
+      >
+        <!-- ✅ Close Button -->
+        <button
+          onclick="closeModal()"
+          class="absolute top-3 right-3 text-white text-3xl font-bold hover:text-red-500 focus:outline-none focus:ring"
+          aria-label="Close modal"
+        >
+          &times;
+        </button>
+
+        <!-- Image -->
+        <img
+          id="modalImage"
+          src=""
+          alt="Enlarged view"
+          class="w-auto h-auto max-w-full max-h-[80vh] mx-auto rounded transition-transform duration-300"
+        />
+      </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button
+      id="scrollToTopBtn"
+      class="hidden fixed bottom-20 right-6 bg-black text-white p-3 rounded-full shadow-lg hover:bg-gray-800 transition-colors duration-300 dark:bg-white dark:text-black"
+      aria-label="Scroll to top"
+      type="button"
+    >
+      <img
+        id="scrollTopIcon"
+        src="./assets/img/arrow-light.svg"
+        alt="Scroll to Top"
+      />
+    </button>
+
+    <!-- Dark Mode Toggle -->
+    <button
+      id="darkModeToggle"
+      class="fixed bottom-6 right-6 bg-black text-white p-3 rounded-full shadow-lg hover:bg-gray-800 transition-colors duration-300 dark:bg-white dark:text-black"
+      aria-label="Toggle dark mode"
+      type="button"
+    >
+      <img
+        id="darkModeIcon"
+        src="./assets/img/dark-mode.svg"
+        alt="Toggle Dark Mode"
+      />
+    </button>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
